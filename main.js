@@ -12,7 +12,7 @@ function generateField() {
         for (column = 0; column < ROW_SIZE; column++) {
             $('#row' + row).append('<div class="column" id="column' + row + column + '"></div>');
             console.log(row + column);
-            if ((row + column) % 2 === 0) {
+            if ((row + column) % 2 !== 0) {
                 $('#column' + row + column).css('background-color', 'black');
             }
         }

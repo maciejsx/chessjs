@@ -1,8 +1,28 @@
-.controll {
-     width: 100%;
+.content {
+    width: 100%;
 }
 
 .field {
-    width: 100%;
-    height : 200px;
+    margin: 0 0 5% 5%;
+    width: 90%;
+    height: 200px;
+}
+
+.board {
+    /*display: inline-table;*/
+    display: block;
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+}
+
+.column {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.row {
+    display: block;
+    height: 100px;
 }

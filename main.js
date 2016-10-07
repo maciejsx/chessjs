@@ -23,6 +23,7 @@ function addListeners() {
 }
 
 function init() {
+    // board.
 
 }
 

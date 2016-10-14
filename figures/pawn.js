@@ -65,6 +65,11 @@ function Graph() {
         }
     }
 
+    public.removeHigherPriority = removeHigherPriority;
+    function removeHigherPriority() {
+        return public.array.shift();
+    }
+
     public.getPathValue = getPathValue;
     function getPathValue(from, to) {
         return array[from * size + to];
@@ -81,15 +86,31 @@ function Blog() {
     var graph = new Graph();
     public.graph = graph;
 
-    public.d = d;
     var d = new Array();
+    public.d = d;
 
     public.initd = initd;
     function initd() {
-        for (var i = 0; i < public.graph.size; i++) {
-            
+        public.d[i] = 0;
+        for (var i = 1; i < public.graph.size; i++) {
+            public.d[i] = null;
         }
     }
+
+    public.queue = new Queue();
+    function addVertesToQueue() {
+        for (var i = 0; i < public.graph; i++) {
+            public.queue.insert(public.graph[i]);
+        }
+    }
+
+    public.algorythm = algorythm;
+    function algorythm() {
+        while(!empty(public.d)) {
+            public.d.getPathValue();
+        }
+    }
+
 
 
 
